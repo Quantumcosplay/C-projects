@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<cs50.h>
+int main()
+{
+    int a;
+    char i,j,k,l;
+    string name;
+    float n,o,p,b;
+    printf("FILL IN THE FORM BELOW;\n");
+    printf("Enter your name:");
+    scanf("%s",&name);
+    printf("Enter your age:");
+    scanf("%d",&a);
+    printf("Enter your average marks for the following semesters\n");
+    printf("First semester:");
+    scanf("%f",&n);
+    printf("Second semester:");
+    scanf("%f",&o);
+    printf("Third semester:");
+    scanf("%f",&p);  
+ char grade(float a){
+        if (75.0<=a&&a<=100.0)
+        {
+            return 'A';
+        }
+        if (60.0<=a&&a<=75.0)
+        {
+ 
+            return 'B';
+        }
+        if (45.0<=a&&a<=60.0)
+        {
+
+            return 'C' ;
+        }
+        if (30.0<=a&&a<=45.0)
+        {
+
+            return 'D';
+        }
+        if (0.0<=a&&a<=30.0)
+        {
+
+            return 'E';
+        }
+        else 
+        printf("Error!");
+    }
+    b=(n+o+p)/3.0;
+    i=grade(n);
+    j=grade(o);
+    k=grade(p);
+    l=grade(b);
+    printf("Here are your results:\n");
+    printf("Name:%s\t Age:%d\n",name,a);
+    printf("First semester:%.2f\t Grade: %c\n",n,i);
+    printf("Second semester:%.2f\t Grade: %c\n",o,j);
+    printf("Third semester:%.2f\t Grade: %c\n",p,k); 
+    printf("Average marks:%.2f   Average Grade: %c\n",b,l);
+    }
+ /* Cursor control: new line--> \n tab key--> /t carriage return--> \r form feed--> \f vertical feed-->\v*/
+ /*Variable formatters or placeholders %d or %i-->int,%c-->char,%s-->string,%f-->float,%e-->double*/
