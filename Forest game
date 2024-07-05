@@ -1,0 +1,58 @@
+#include<stdio.h>
+int main()
+{
+   //declare variables
+   char a,c;
+   int i,b;
+   //user input
+   printf("Welcome to the lost forest\n");
+   
+Outer_core:
+for(i=0;i<9;i++)
+   {  
+      printf("Use characters:\nA go left B go right\n");
+      printf("Try to get out of the lost forest\n");
+      printf("**********************************\n********:):):):):):):)************\n**********************************\n");
+      scanf(" %c",&a);
+
+      while(a=='A'||a=='a')
+      {  
+      printf("Oh no!\nYour still in the lost forest\n**********************************\n********:(:(:(:(:(:(:(************\n**********************************\n");
+      scanf(" %c",&a);
+      }
+      while (a=='D'||a=='d')
+      {
+       printf("Congratulations!\nYou got out of the lost forest\n**********************************\n*******************:):):):):):):)||\n**********************************\n");
+       goto play_again;
+      }  
+
+      if(a!='A'&&a!='a'&&a!='D'&&a!='d')
+      {
+      printf("Invalid input!\n");
+      i++;
+      }
+   }
+   printf("Your 5 lives are over!");
+   play_again:
+   printf("Do you wish to play\nagain:<Y for yes N for no>\n");
+   scanf(" %c",&c);
+   if (c =='Y')
+   {
+     goto Outer_core;
+   }
+   else
+   {
+     printf("Goodbye :)");
+   }
+   }
+
+  /* printf("Try to get out of the lost forest\n");
+   printf("**********************************\n********:):):):):):):)************\n**********************************\n");
+   
+
+   printf("Oh no!\nYour still in the lost forest\n**********************************\n********:(:(:(:(:(:(:(************\n**********************************\n\n")
+   ;
+   printf("Congratulations!\nYou got out of the lost forest\n**********************************\n*******************:):):):):):):)||\n**********************************\n");
+   //for loop
+   //while loop
+   //if statement*/
